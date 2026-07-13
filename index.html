@@ -1,0 +1,27 @@
+<!--
+  𝑹andom
+  𝑻ournament
+  𝑳egal
+  𝑴elee
+  𝑺tage
+-->
+<title>RTLMS</title>
+<img id=i /><br><span id=s></span>
+<button id=b onclick=h()>Random Stage</button>
+<script>
+  h=(()=>{
+	o = {
+			bf:  'Battlefield',
+			fd:  'Final Destination',
+			ps:  'Pokémon Stadium',
+			ys:  'Yoshi\'s Story',
+			dl:  'Dream Land',
+			fod: 'Fountain of Dreams'
+		};
+	
+	c = Object.keys(o)[0|(Math.random()*6)];
+	i.src = `/img/${c}.png`;
+	s.innerText = o[c];
+	b.remove();
+  });
+</script>
