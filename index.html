@@ -6,7 +6,7 @@
   𝑺tage
 -->
 <title>RTLMS</title>
-<img id=i /><br><span id=s></span>
+<a href=/><img id=i /></a><br><span id=s></span>
 <button id=b onclick=h()>Random Stage</button>
 <script>
   h=(()=>{
@@ -20,8 +20,13 @@
 		};
 	
 	c = Object.keys(o)[0|(Math.random()*6)];
-	i.src = `img/${c}.png`;
+	i.src = `/img/${c}.png`;
 	s.innerText = o[c];
 	b.remove();
   });
 </script>
+<style>
+  body {
+	zoom: 2;
+  }
+</style>
